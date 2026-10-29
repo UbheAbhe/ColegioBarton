@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es-PE">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Accesibilidad | Colegio Benjamin Barton</title>
+  <meta name="description" content="Opciones de accesibilidad del sitio del Colegio Benjamin Barton para personas con discapacidad visual, auditiva, motriz, cognitiva y otras.">
+  <meta name="theme-color" content="#4a2743">
+  <link rel="icon" type="image/png" href="https://barton.engie24.com/wp-content/uploads/2026/05/Logo_cropped-Barton.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&amp;family=Outfit:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/accesibilidad.css">
+  <script>/* aplica las preferencias de accesibilidad antes de pintar la página */
+  try{var a=JSON.parse(localStorage.getItem("barton-a11y")||"{}"),h=document.documentElement,c=[];if(a.texto&&a.texto!=100)h.style.fontSize=a.texto+"%";if(a.texto>=130)c.push("a11y-texto-grande");if(a.contraste&&a.contraste!="normal")c.push("a11y-contraste-"+a.contraste);if(a.color&&a.color!="normal")c.push(a.color=="saturacion-baja"?"a11y-saturacion-baja":"a11y-cv-"+a.color);["enlaces","fuente","espaciado","cursor","foco","sin-animacion","sin-imagenes"].forEach(function(k){if(a[k])c.push("a11y-"+k)});if(c.length)h.className+=" "+c.join(" ")}catch(e){}</script>
+</head>
+<body>
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+<div class="barra-superior">
+  <div class="contenedor">
+    <span class="direccion"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Sede principal: Jr. Virú N° 565, Rímac, Lima – Perú</span>
+    <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg><a href="tel:+51943506739">943 506 739</a> / <a href="tel:+51943506743">943 506 743</a> / <a href="tel:+5114827589">(01) 482-7589</a></span>
+    <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><a href="mailto:informes@colegiobarton.edu.pe">informes@colegiobarton.edu.pe</a></span>
+    <button type="button" class="a11y-enlace" aria-controls="a11y-panel">Opciones de accesibilidad</button>
+  </div>
+</div>
+<header class="cabecera">
+  <div class="contenedor">
+    <a class="marca" href="index.html">
+      <img src="https://barton.engie24.com/wp-content/uploads/2026/05/Logo_cropped-Barton.png" alt="" width="48" height="48">
+      <span><strong>Colegio Benjamin Barton</strong><small>I.E.P. Benjamín Barton, Rímac</small></span>
+    </a>
+    <nav class="navegacion" id="navegacion" aria-label="Principal">
+      <ul class="menu">
+<li><a href="index.html">Inicio</a></li>
+<li><button type="button" aria-expanded="false" aria-controls="sub-1">Nosotros<svg class="flecha" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button><ul class="submenu" id="sub-1"><li><a href="bienvenidos.html">Bienvenidos al colegio</a></li><li><a href="organizacion-institucional.html">Organización institucional</a></li><li><a href="ideas-rectoras.html">Ideas rectoras</a></li><li><a href="municipio-escolar.html">Municipio escolar</a></li><li><a href="benjamin-barton.html">Benjamin Barton</a></li></ul></li>
+<li><a href="admision.html">Admisión</a></li>
+<li><button type="button" aria-expanded="false" aria-controls="sub-3">Niveles<svg class="flecha" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button><ul class="submenu" id="sub-3"><li><a href="nivel-inicial.html">Nivel Inicial</a></li><li><a href="nivel-primaria.html">Nivel Primaria</a></li><li><a href="nivel-secundaria.html">Nivel Secundaria</a></li></ul></li>
+<li><button type="button" aria-expanded="false" aria-controls="sub-4">Vida escolar<svg class="flecha" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button><ul class="submenu" id="sub-4"><li><a href="actividades.html">Actividades en video</a></li><li><a href="noticias.html">Noticias</a></li></ul></li>
+<li><button type="button" aria-expanded="false" aria-controls="sub-5">Campus virtual<svg class="flecha" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button><ul class="submenu" id="sub-5"><li><a href="biblioteca-virtual.html">Biblioteca virtual</a></li><li><a href="horarios.html">Horarios</a></li><li><a href="lista-de-utiles.html">Lista de útiles</a></li><li><a href="cuadernos-virtuales.html">Cuadernos virtuales</a></li><li><a class="externo" href="https://colegiobarton.cubicol.pe/principal/login" target="_blank" rel="noopener">Cubicol</a></li></ul></li>
+<li><a href="contactenos.html">Contáctenos</a></li>
+      </ul>
+      <a class="boton boton--principal boton--movil" href="https://colegiobarton.cubicol.pe/principal/login" target="_blank" rel="noopener">Ingresar a Cubicol</a>
+    </nav>
+    <a class="boton boton--borde boton--cubicol" href="https://colegiobarton.cubicol.pe/principal/login" target="_blank" rel="noopener">Cubicol</a>
+    <button class="boton-menu" type="button" aria-controls="navegacion" aria-expanded="false" aria-label="Abrir menú"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+  </div>
+</header>
+<div class="velo"></div>
+<main id="contenido">
+<section class="cabecera-pagina">
+  <div class="contenedor">
+    <nav class="migas" aria-label="Ruta"><ol><li><a href="index.html">Inicio</a></li><li aria-current="page">Accesibilidad</li></ol></nav>
+    <h1>Accesibilidad</h1>
+    <p>Queremos que todas las personas, con o sin discapacidad, puedan informarse y comunicarse con el colegio.</p>
+  </div>
+</section>
+<section class="seccion">
+  <div class="contenedor dos-columnas">
+    <div>
+      <h2>Ajusta la web a tu manera</h2>
+      <p>Abre el panel con el botón <strong>Accesibilidad</strong>, abajo a la izquierda de cada página, o con <kbd>Alt</kbd> + <kbd>A</kbd>. Tus preferencias se guardan en este navegador.</p>
+      <button type="button" class="boton boton--principal" onclick="window.BartonA11y &amp;&amp; window.BartonA11y.abrir()">Abrir opciones de accesibilidad</button>
+    </div>
+    <div class="prosa">
+      <p class="entrada">Este sitio se diseñó tomando como referencia las Pautas de Accesibilidad para el Contenido Web (WCAG) 2.2, nivel AA, del W3C.</p>
+      <p>Además de las opciones del panel, cuidamos lo básico: contraste suficiente entre texto y fondo, títulos ordenados, textos alternativos en las imágenes, formularios con etiquetas y mensajes de error claros, y un diseño que se adapta a celulares y a la ampliación del navegador.</p>
+    </div>
+  </div>
+</section>
+<section class="seccion seccion--rubor">
+  <div class="contenedor">
+    <div class="encabezado-seccion"><h2>Ayudas según cada necesidad</h2><p>Agrupadas según los tipos de discapacidad que describen el W3C y las clasificaciones de discapacidad física, sensorial, intelectual, psicosocial y múltiple.</p></div>
+    <div class="ayudas"><article class="ayuda">
+      <h3>Discapacidad visual</h3><p class="ayuda__quien">Ceguera y baja visión</p>
+      <ul><li>Lectura de la página en voz alta, con velocidad ajustable.</li><li>Compatible con lectores de pantalla: títulos ordenados, textos alternativos en las fotos y enlace para saltar al contenido.</li><li>Texto ampliable hasta 175 % sin perder información.</li><li>Dos modos de alto contraste: fondo negro o fondo blanco.</li><li>Resaltado de todos los enlaces.</li></ul>
+    </article><article class="ayuda">
+      <h3>Daltonismo</h3><p class="ayuda__quien">Dificultad para distinguir colores</p>
+      <ul><li>Ajuste de colores para protanopía (rojo), deuteranopía (verde) y tritanopía (azul y amarillo).</li><li>Modo de acromatopsia: escala de grises con más contraste.</li><li>La información no depende solo del color: los enlaces se subrayan y los estados se indican con texto.</li></ul>
+    </article><article class="ayuda">
+      <h3>Discapacidad auditiva</h3><p class="ayuda__quien">Personas sordas o con hipoacusia</p>
+      <ul><li>Los videos se abren con subtítulos en español cuando YouTube los tiene disponibles.</li><li>El sitio no usa sonidos ni avisos que solo se escuchen.</li><li>Contacto por escrito mediante formulario y correo, sin necesidad de llamar.</li></ul>
+    </article><article class="ayuda">
+      <h3>Discapacidad del habla</h3><p class="ayuda__quien">Tartamudez, afasia, mudez u otras</p>
+      <ul><li>Todos los trámites de información se pueden hacer por escrito.</li><li>El control por voz es opcional: nada del sitio exige hablar.</li></ul>
+    </article><article class="ayuda">
+      <h3>Discapacidad física o motriz</h3><p class="ayuda__quien">Movilidad reducida, temblores o poca precisión</p>
+      <ul><li>Todo el sitio se puede usar solo con el teclado.</li><li>Control por voz para navegar, desplazarse y pulsar botones diciendo su nombre.</li><li>Cursor grande y áreas de clic más amplias.</li><li>Foco del teclado resaltado en amarillo.</li><li>Ninguna página tiene límites de tiempo.</li></ul>
+    </article><article class="ayuda">
+      <h3>Discapacidad cognitiva, intelectual y del aprendizaje</h3><p class="ayuda__quien">Dislexia, TDAH, autismo y otras</p>
+      <ul><li>Letra de fácil lectura (Atkinson Hyperlegible).</li><li>Más espacio entre letras, palabras y líneas.</li><li>Guía de lectura que oscurece todo menos la línea que estás leyendo.</li><li>Ocultar imágenes y suavizar colores para reducir distracciones.</li><li>Menú y estructura iguales en todas las páginas.</li></ul>
+    </article><article class="ayuda">
+      <h3>Epilepsia fotosensible y trastornos vestibulares</h3><p class="ayuda__quien">Sensibilidad a destellos o al movimiento</p>
+      <ul><li>El sitio no tiene destellos ni parpadeos.</li><li>Opción para detener todas las animaciones y el carrusel.</li><li>El carrusel de portada tiene botón de pausa y respeta la opción «reducir movimiento» del sistema.</li></ul>
+    </article><article class="ayuda">
+      <h3>Discapacidad múltiple</h3><p class="ayuda__quien">Por ejemplo, sordoceguera</p>
+      <ul><li>Las opciones se pueden combinar y se recuerdan en el navegador.</li><li>La estructura del sitio funciona con líneas braille a través del lector de pantalla.</li></ul>
+    </article></div>
+  </div>
+</section>
+<section class="seccion">
+  <div class="contenedor dos-columnas">
+    <div>
+      <h2>Atajos de teclado</h2>
+      <p>Funcionan en todas las páginas.</p>
+    </div>
+    <table class="tabla-a11y"><caption class="solo-lectores">Atajos de teclado</caption>
+      <thead><tr><th scope="col">Teclas</th><th scope="col">Qué hace</th></tr></thead><tbody><tr><th scope="row"><kbd>Alt + A</kbd></th><td>Abrir o cerrar las opciones de accesibilidad</td></tr><tr><th scope="row"><kbd>Alt + L</kbd></th><td>Leer la página en voz alta o detener la lectura</td></tr><tr><th scope="row"><kbd>Alt + V</kbd></th><td>Activar o desactivar el control por voz</td></tr><tr><th scope="row"><kbd>Tab / Mayús + Tab</kbd></th><td>Avanzar o retroceder entre enlaces y botones</td></tr><tr><th scope="row"><kbd>Enter o Espacio</kbd></th><td>Activar el enlace o botón seleccionado</td></tr><tr><th scope="row"><kbd>Esc</kbd></th><td>Cerrar menús, ventanas y el panel; detener la lectura</td></tr><tr><th scope="row"><kbd>Flechas izquierda y derecha</kbd></th><td>Cambiar de foto en el visor y de pestaña en Horarios y Lista de útiles</td></tr></tbody></table>
+  </div>
+</section>
+<section class="seccion seccion--rubor">
+  <div class="contenedor dos-columnas">
+    <div>
+      <h2>Comandos de voz</h2>
+      <p>Activa el control por voz desde el panel o con <kbd>Alt</kbd> + <kbd>V</kbd>. Funciona en Chrome y Edge, y el navegador te pedirá permiso para usar el micrófono.</p>
+    </div>
+    <table class="tabla-a11y"><caption class="solo-lectores">Comandos de voz</caption>
+      <thead><tr><th scope="col">Di</th><th scope="col">Qué hace</th></tr></thead><tbody><tr><th scope="row">«Ir a admisión», «ir a biblioteca», «ir a contacto»</th><td>Abre esa página. Funciona con cualquier sección del menú.</td></tr><tr><th scope="row">«Bajar» / «subir»</th><td>Desplaza la página.</td></tr><tr><th scope="row">«Al final» / «al principio»</th><td>Va al final o al inicio de la página.</td></tr><tr><th scope="row">«Leer página» / «detener» / «pausa» / «continuar»</th><td>Controla la lectura en voz alta.</td></tr><tr><th scope="row">«Clic en…» y el nombre</th><td>Pulsa el botón o enlace con ese nombre, por ejemplo «clic en Primaria».</td></tr><tr><th scope="row">«Aumentar texto» / «reducir texto»</th><td>Cambia el tamaño de la letra.</td></tr><tr><th scope="row">«Contraste»</th><td>Activa o quita el alto contraste.</td></tr><tr><th scope="row">«Atrás»</th><td>Vuelve a la página anterior.</td></tr><tr><th scope="row">«Ayuda»</th><td>Muestra la lista de comandos.</td></tr><tr><th scope="row">«Dejar de escuchar»</th><td>Apaga el micrófono.</td></tr></tbody></table>
+  </div>
+</section>
+<section class="seccion">
+  <div class="contenedor dos-columnas">
+    <div><h2>Normas de referencia</h2></div>
+    <div class="prosa">
+      <ul>
+        <li><strong>WCAG 2.2, nivel AA</strong> (W3C): estándar internacional de accesibilidad web.</li>
+        <li><strong>Ley N.° 29973</strong>, Ley General de la Persona con Discapacidad (Perú): reconoce el derecho a la accesibilidad, incluida la información y las comunicaciones.</li>
+        <li><strong>Resolución de Secretaría de Gobierno y Transformación Digital N.° 001-2025-PCM/SGTD</strong>: lineamientos de accesibilidad digital para entidades públicas. El colegio es una institución privada y la toma como buena práctica.</li>
+      </ul>
+      <h2>Limitaciones conocidas</h2>
+      <ul>
+        <li>Algunos PDF (horarios, listas de útiles, reglamentos) son documentos escaneados o diseñados para imprimir y pueden no leerse bien con lectores de pantalla. Si necesitas una versión accesible, pídela por correo.</li>
+        <li>Los subtítulos de los videos dependen de YouTube; en algunos casos son generados automáticamente.</li>
+        <li>Todavía no hay videos en Lengua de Señas Peruana (LSP). Es una mejora recomendada para el colegio.</li>
+        <li>La lectura en voz alta y el control por voz dependen del navegador y de las voces instaladas en el equipo.</li>
+      </ul>
+      <h2>¿Encontraste una barrera?</h2>
+      <p>Cuéntanos qué página y qué problema encontraste, y te responderemos por el medio que prefieras. Escríbenos a <a href="mailto:informes@colegiobarton.edu.pe?subject=Accesibilidad%20del%20sitio%20web">informes@colegiobarton.edu.pe</a> o usa el <a href="contactenos.html#form-contacto">formulario de contacto</a>.</p>
+      <p class="foto-pie">Última revisión: octubre de 2026.</p>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="pie" id="pie">
+  <div class="contenedor">
+    <div class="pie__rejilla">
+      <div>
+        <div class="pie__marca"><img src="https://barton.engie24.com/wp-content/uploads/2026/05/logo_con_sombra-e1604982537104-150x150.png" alt="" width="60" height="60"><strong>Colegio<br>Benjamin Barton</strong></div>
+        <p>Institución educativa privada creada en 1993 por la Iglesia Alianza Cristiana y Misionera del Rímac. Inicial, primaria y secundaria.</p>
+        <p class="pie__lema">Verdad, libertad y justicia</p>
+        <div class="redes">
+          <a href="https://www.facebook.com/IEPcolegiobarton" target="_blank" rel="noopener" aria-label="Facebook del colegio"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 8.5V6.8c0-.8.2-1.3 1.4-1.3H17V2.3c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2H7.5v3.2h2.8V22H14v-10.3h2.8l.4-3.2Z"/></svg></a>
+          <a href="https://www.youtube.com/user/colegiobarton" target="_blank" rel="noopener" aria-label="Canal de YouTube del colegio"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8ZM9.7 15.1V8.9l5.8 3.1Z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h2>El colegio</h2>
+        <ul>
+          <li><a href="bienvenidos.html">Nosotros</a></li>
+          <li><a href="admision.html">Admisión</a></li>
+          <li><a href="nivel-inicial.html">Nivel Inicial</a></li>
+          <li><a href="nivel-primaria.html">Nivel Primaria</a></li>
+          <li><a href="nivel-secundaria.html">Nivel Secundaria</a></li>
+          <li><a href="actividades.html">Actividades</a></li>
+          <li><a href="noticias.html">Noticias</a></li>
+          <li><a href="accesibilidad.html">Accesibilidad</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Campus virtual</h2>
+        <ul>
+          <li><a href="https://colegiobarton.cubicol.pe/principal/login" target="_blank" rel="noopener">Cubicol (web)</a></li>
+          <li><a href="https://play.google.com/store/apps/details?id=pe.cubicol.android.colegiobarton" target="_blank" rel="noopener">App Cubicol para Android</a></li>
+          <li><a href="biblioteca-virtual.html">Biblioteca virtual</a></li>
+          <li><a href="horarios.html">Horarios</a></li>
+          <li><a href="lista-de-utiles.html">Lista de útiles</a></li>
+          <li><a href="cuadernos-virtuales.html">Cuadernos virtuales</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Visítenos</h2>
+        <ul class="pie__contacto">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Jr. Virú N° 565, Rímac, Lima – Perú</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg><span><a href="tel:+51943506739">943 506 739</a><br><a href="tel:+51943506743">943 506 743</a><br><a href="tel:+5114827589">(01) 482-7589</a></span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><a href="mailto:informes@colegiobarton.edu.pe">informes@colegiobarton.edu.pe</a></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Lunes a viernes, de 08:00 a 15:30</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="pie__base">
+      <span>© <span data-anio-actual>2026</span> Colegio Benjamin Barton. Rímac, Lima, Perú.</span>
+      <span>Propuesta de rediseño web con fines académicos.</span>
+    </div>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+<script src="js/accesibilidad.js"></script>
+</body>
+</html>

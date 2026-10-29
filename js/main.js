@@ -62,7 +62,11 @@
     var titulo = $(".portada h1", portada);
     var lema = $(".portada__lema", portada);
     var contador = $(".portada__contador", portada);
-    var actual = 0, temporizador = null;
+    var botonPausa = $(".portada__pausa", portada);
+    var actual = 0, temporizador = null, pausadoPorUsuario = false, reanudadoPorUsuario = false, enPortada = false;
+    var sinMovimiento = function () {
+      return reducirMovimiento || doc.documentElement.classList.contains("a11y-sin-animacion");
+    };
     var mostrar = function (i) {
       diapos[actual].classList.remove("activa");
       diapos[actual].setAttribute("aria-hidden", "true");
@@ -74,18 +78,32 @@
       lema.textContent = d.dataset.lema;
       contador.textContent = (actual + 1) + " / " + diapos.length;
     };
+    var detener = function () { if (temporizador) clearInterval(temporizador); temporizador = null; };
+    var quiereCorrer = function () { return !pausadoPorUsuario && (!sinMovimiento() || reanudadoPorUsuario); };
     var iniciar = function () {
-      if (reducirMovimiento) return;
       detener();
+      if (!quiereCorrer()) return;
       temporizador = setInterval(function () { mostrar(actual + 1); }, 6500);
     };
-    var detener = function () { if (temporizador) clearInterval(temporizador); };
+    var pintarPausa = function () {
+      var parado = !quiereCorrer();
+      botonPausa.setAttribute("aria-label", parado ? "Reanudar el carrusel" : "Pausar el carrusel");
+      botonPausa.innerHTML = parado
+        ? '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>'
+        : '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 5h3.5v14H7zM13.5 5H17v14h-3.5z"/></svg>';
+    };
     $(".portada__anterior", portada).addEventListener("click", function () { mostrar(actual - 1); iniciar(); });
     $(".portada__siguiente", portada).addEventListener("click", function () { mostrar(actual + 1); iniciar(); });
-    portada.addEventListener("mouseenter", detener);
-    portada.addEventListener("mouseleave", iniciar);
-    portada.addEventListener("focusin", detener);
+    botonPausa.addEventListener("click", function () {
+      if (quiereCorrer()) { pausadoPorUsuario = true; detener(); }
+      else { pausadoPorUsuario = false; reanudadoPorUsuario = true; mostrar(actual + 1); if (!enPortada) iniciar(); }
+      pintarPausa();
+    });
+    portada.addEventListener("mouseenter", function () { enPortada = true; detener(); });
+    portada.addEventListener("mouseleave", function () { enPortada = false; iniciar(); });
+    doc.addEventListener("barton:a11y", function () { reanudadoPorUsuario = false; if (!enPortada) iniciar(); pintarPausa(); });
     iniciar();
+    pintarPausa();
   }
 
   /* ---------- Tiras deslizables con flechas ---------- */
@@ -111,6 +129,10 @@
   doc.body.appendChild(visor);
   var contenido = $(".visor__contenido", visor);
   var grupoActual = [], indice = 0, origen = null;
+  /* Subtítulos en español activados según el panel de accesibilidad */
+  var paramsVideo = function () {
+    return window.BartonA11y ? window.BartonA11y.paramsVideo() : "&cc_load_policy=1&cc_lang_pref=es&hl=es";
+  };
 
   function pintarImagen() {
     var el = grupoActual[indice];
@@ -152,7 +174,7 @@
       origen = v;
       grupoActual = [];
       contenido.innerHTML = '<div class="marco-video"><iframe src="https://www.youtube-nocookie.com/embed/' +
-        v.dataset.video + '?autoplay=1&rel=0" title="' + (v.dataset.titulo || "Video") +
+        v.dataset.video + '?autoplay=1&rel=0' + paramsVideo() + '" title="' + (v.dataset.titulo || "Video") +
         '" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe></div>';
       $(".anterior", visor).hidden = true;
       $(".siguiente", visor).hidden = true;
@@ -175,7 +197,7 @@
     b.addEventListener("click", function () {
       var marco = b.parentElement;
       marco.innerHTML = '<iframe src="https://www.youtube-nocookie.com/embed/' + b.dataset.video +
-        '?autoplay=1&rel=0" title="' + (b.dataset.titulo || "Video") +
+        '?autoplay=1&rel=0' + paramsVideo() + '" title="' + (b.dataset.titulo || "Video") +
         '" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>';
     });
   });

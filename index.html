@@ -11,6 +11,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&amp;family=Outfit:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/accesibilidad.css">
+  <script>/* aplica las preferencias de accesibilidad antes de pintar la página */
+  try{var a=JSON.parse(localStorage.getItem("barton-a11y")||"{}"),h=document.documentElement,c=[];if(a.texto&&a.texto!=100)h.style.fontSize=a.texto+"%";if(a.texto>=130)c.push("a11y-texto-grande");if(a.contraste&&a.contraste!="normal")c.push("a11y-contraste-"+a.contraste);if(a.color&&a.color!="normal")c.push(a.color=="saturacion-baja"?"a11y-saturacion-baja":"a11y-cv-"+a.color);["enlaces","fuente","espaciado","cursor","foco","sin-animacion","sin-imagenes"].forEach(function(k){if(a[k])c.push("a11y-"+k)});if(c.length)h.className+=" "+c.join(" ")}catch(e){}</script>
 </head>
 <body>
 <a class="saltar" href="#contenido">Saltar al contenido</a>
@@ -19,6 +22,7 @@
     <span class="direccion"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Sede principal: Jr. Virú N° 565, Rímac, Lima – Perú</span>
     <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg><a href="tel:+51943506739">943 506 739</a> / <a href="tel:+51943506743">943 506 743</a> / <a href="tel:+5114827589">(01) 482-7589</a></span>
     <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><a href="mailto:informes@colegiobarton.edu.pe">informes@colegiobarton.edu.pe</a></span>
+    <button type="button" class="a11y-enlace" aria-controls="a11y-panel">Opciones de accesibilidad</button>
   </div>
 </div>
 <header class="cabecera">
@@ -63,7 +67,8 @@
   </div>
   <div class="portada__controles">
     <button type="button" class="portada__anterior" aria-label="Imagen anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></button>
-    <span class="portada__contador">1 / 8</span>
+    <button type="button" class="portada__pausa" aria-label="Pausar el carrusel"></button>
+    <span class="portada__contador" aria-live="off">1 / 8</span>
     <button type="button" class="portada__siguiente" aria-label="Imagen siguiente"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button>
   </div>
 </section>
@@ -214,6 +219,7 @@
           <li><a href="nivel-secundaria.html">Nivel Secundaria</a></li>
           <li><a href="actividades.html">Actividades</a></li>
           <li><a href="noticias.html">Noticias</a></li>
+          <li><a href="accesibilidad.html">Accesibilidad</a></li>
         </ul>
       </div>
       <div>
@@ -244,5 +250,6 @@
   </div>
 </footer>
 <script src="js/main.js"></script>
+<script src="js/accesibilidad.js"></script>
 </body>
 </html>
