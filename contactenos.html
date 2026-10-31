@@ -73,13 +73,13 @@
       <h2>Envíenos un mensaje</h2>
       <p>Le responderemos en horario de atención. Los campos con * son obligatorios.</p>
       <div class="campos">
-        <div class="campo campo--ancho"><label for="c-nombre">Nombre completo *</label><input id="c-nombre" name="nombre" autocomplete="name" required><span class="error" id="c-nombre-error"></span></div>
-        <div class="campo"><label for="c-correo">Correo electrónico *</label><input id="c-correo" name="correo" type="email" autocomplete="email" placeholder="nombre@correo.com" required><span class="error" id="c-correo-error"></span></div>
-        <div class="campo"><label for="c-telefono">Teléfono *</label><input id="c-telefono" name="telefono" type="tel" autocomplete="tel" placeholder="9XX XXX XXX" required><span class="error" id="c-telefono-error"></span></div>
+        <div class="campo campo--ancho"><label for="c-nombre">Nombre completo *</label><input id="c-nombre" aria-describedby="c-nombre-error" name="nombre" autocomplete="name" required><span class="error" id="c-nombre-error"></span></div>
+        <div class="campo"><label for="c-correo">Correo electrónico *</label><input id="c-correo" aria-describedby="c-correo-error" name="correo" type="email" autocomplete="email" placeholder="nombre@correo.com" required><span class="error" id="c-correo-error"></span></div>
+        <div class="campo"><label for="c-telefono">Teléfono *</label><input id="c-telefono" aria-describedby="c-telefono-error" name="telefono" type="tel" autocomplete="tel" placeholder="9XX XXX XXX" required><span class="error" id="c-telefono-error"></span></div>
         <div class="campo"><label for="c-nivel">Nivel de interés</label>
           <select id="c-nivel" name="nivel"><option>No aplica</option><option>Inicial</option><option>Primaria</option><option>Secundaria</option></select><span class="error"></span></div>
-        <div class="campo"><label for="c-asunto">Asunto *</label><input id="c-asunto" name="asunto" placeholder="Ej.: vacantes 2027" required><span class="error" id="c-asunto-error"></span></div>
-        <div class="campo campo--ancho"><label for="c-mensaje">Mensaje *</label><textarea id="c-mensaje" name="mensaje" required></textarea><span class="error" id="c-mensaje-error"></span></div>
+        <div class="campo"><label for="c-asunto">Asunto *</label><input id="c-asunto" aria-describedby="c-asunto-error" name="asunto" placeholder="Ej.: vacantes 2027" required><span class="error" id="c-asunto-error"></span></div>
+        <div class="campo campo--ancho"><label for="c-mensaje">Mensaje *</label><textarea id="c-mensaje" name="mensaje" required aria-describedby="c-mensaje-error"></textarea><span class="error" id="c-mensaje-error"></span></div>
       </div>
       <button class="boton boton--principal" type="submit">Enviar mensaje</button>
       <p class="estado-envio" aria-live="polite"></p>

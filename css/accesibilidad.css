@@ -51,7 +51,7 @@
 }
 .a11y-opcion:hover { border-color: #b98aa9; background: #f6edf2; }
 .a11y-opcion small { display: block; font-weight: 400; font-size: .8125rem; color: #6b5c68; margin-top: 2px; }
-.a11y-interruptor { flex: none; width: 42px; height: 24px; border-radius: 999px; background: #cbbac5; position: relative; transition: background-color .15s; }
+.a11y-interruptor { flex: none; width: 42px; height: 24px; border-radius: 999px; background: #8a7684; position: relative; transition: background-color .15s; }
 .a11y-interruptor::after { content: ""; position: absolute; top: 3px; left: 3px; width: 18px; height: 18px; border-radius: 50%; background: #fff; transition: transform .15s; }
 .a11y-opcion[aria-pressed="true"] { border-color: #4a2743; background: #f6edf2; }
 .a11y-opcion[aria-pressed="true"] .a11y-interruptor { background: #4a2743; }
@@ -263,3 +263,26 @@ html.a11y-texto-grande .portada__bloque, html.a11y-espaciado .portada__bloque { 
 html.a11y-texto-grande .portada h1 { font-size: clamp(1.6rem, 7vw, 4rem); overflow-wrap: normal; }
 html.a11y-texto-grande .cabecera-pagina h1, html.a11y-texto-grande h1, html.a11y-texto-grande h2 { overflow-wrap: break-word; hyphens: auto; }
 @media (max-width: 640px) { html.a11y-texto-grande .marca strong { font-size: 1rem; } html.a11y-texto-grande .cabecera-pagina h1 { font-size: 1.9rem; } }
+/* 2.5.8 (WCAG 2.2): controles del panel con área mínima de 24 px */
+.a11y-rango { height: 28px; }
+.a11y-panel__pie a { display: inline-flex; align-items: center; min-height: 24px; }
+/* v3.0: el botón flotante es compacto para no tapar contenido (WCAG 1.4.10 y 2.4.11) */
+.a11y-lanzador { padding: 0; width: 56px; justify-content: center; }
+.a11y-lanzador .a11y-lanzador__texto { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+html { scroll-padding-bottom: 88px; scroll-padding-top: 96px; }
+
+/* Declaración de accesibilidad */
+.declaracion { display: grid; gap: 28px; max-width: 920px; }
+.declaracion__cab { display: grid; gap: 14px; }
+.estado-conformidad { display: inline-grid; gap: 4px; justify-self: start; margin: 0; padding: 14px 20px; border: 2px solid var(--ciruela, #4a2743); border-left-width: 8px; border-radius: var(--radio-s, 8px); background: var(--rubor, #f6edf2); }
+.estado-conformidad span { font-size: var(--t-xs, .82rem); text-transform: uppercase; letter-spacing: .08em; color: var(--tinta-suave, #6b5c68); }
+.estado-conformidad strong { color: var(--ciruela, #4a2743); font-size: 1.15rem; }
+.declaracion__tabla { overflow-x: auto; }
+.declaracion__tabla caption { text-align: left; font-weight: 600; padding-bottom: 8px; color: var(--tinta, #2e2430); }
+.declaracion__tabla td { font-variant-numeric: tabular-nums; }
+.declaracion__tabla tr.total th, .declaracion__tabla tr.total td { font-weight: 700; background: var(--rubor, #f6edf2); }
+.declaracion .prosa h3 { margin-top: 1.6em; }
+
+/* Foco visible también en los modos de alto contraste (los modos anulan el halo) */
+html.a11y-contraste-oscuro :focus-visible { outline: 3px solid #ffe800 !important; outline-offset: 3px !important; }
+html.a11y-contraste-claro :focus-visible { outline: 3px solid #0000cc !important; outline-offset: 3px !important; }

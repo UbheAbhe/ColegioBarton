@@ -64,7 +64,7 @@
       <button type="button" class="boton boton--principal" onclick="window.BartonA11y &amp;&amp; window.BartonA11y.abrir()">Abrir opciones de accesibilidad</button>
     </div>
     <div class="prosa">
-      <p class="entrada">Este sitio se diseñó tomando como referencia las Pautas de Accesibilidad para el Contenido Web (WCAG) 2.2, nivel AA, del W3C.</p>
+      <p class="entrada">Este sitio se diseñó con el objetivo de cumplir las Pautas de Accesibilidad para el Contenido Web (WCAG) 2.1, nivel AA, del W3C. Puedes ver el resultado de la evaluación en la <a href="#declaracion">declaración de accesibilidad</a>.</p>
       <p>Además de las opciones del panel, cuidamos lo básico: contraste suficiente entre texto y fondo, títulos ordenados, textos alternativos en las imágenes, formularios con etiquetas y mensajes de error claros, y un diseño que se adapta a celulares y a la ampliación del navegador.</p>
     </div>
   </div>
@@ -119,25 +119,49 @@
       <thead><tr><th scope="col">Di</th><th scope="col">Qué hace</th></tr></thead><tbody><tr><th scope="row">«Ir a admisión», «ir a biblioteca», «ir a contacto»</th><td>Abre esa página. Funciona con cualquier sección del menú.</td></tr><tr><th scope="row">«Bajar» / «subir»</th><td>Desplaza la página.</td></tr><tr><th scope="row">«Al final» / «al principio»</th><td>Va al final o al inicio de la página.</td></tr><tr><th scope="row">«Leer página» / «detener» / «pausa» / «continuar»</th><td>Controla la lectura en voz alta.</td></tr><tr><th scope="row">«Clic en…» y el nombre</th><td>Pulsa el botón o enlace con ese nombre, por ejemplo «clic en Primaria».</td></tr><tr><th scope="row">«Aumentar texto» / «reducir texto»</th><td>Cambia el tamaño de la letra.</td></tr><tr><th scope="row">«Contraste»</th><td>Activa o quita el alto contraste.</td></tr><tr><th scope="row">«Atrás»</th><td>Vuelve a la página anterior.</td></tr><tr><th scope="row">«Ayuda»</th><td>Muestra la lista de comandos.</td></tr><tr><th scope="row">«Dejar de escuchar»</th><td>Apaga el micrófono.</td></tr></tbody></table>
   </div>
 </section>
-<section class="seccion">
-  <div class="contenedor dos-columnas">
-    <div><h2>Normas de referencia</h2></div>
+<section class="seccion" id="declaracion" aria-labelledby="decl-titulo">
+  <div class="contenedor declaracion">
+    <div class="declaracion__cab">
+      <h2 id="decl-titulo">Declaración de accesibilidad</h2>
+      <p class="estado-conformidad"><span>Estado de conformidad</span><strong>Parcialmente conforme con WCAG 2.1 nivel AA</strong></p>
+    </div>
     <div class="prosa">
+      <p class="entrada">«Parcialmente conforme» significa que la mayor parte del sitio cumple las Pautas de Accesibilidad para el Contenido Web (WCAG) 2.1, nivel AA, pero algunas partes todavía no. Las listamos abajo con su plan de mejora.</p>
+      <h3>Alcance</h3>
+      <p>Versión 3.0 del sitio (prototipo académico del curso Interacción Hombre Máquina). Se evaluaron 7 pantallas del flujo principal y sus estados: Inicio (carga, carrusel en reproducción y en pausa); Admisión (información y llamado a solicitar vacante); Solicitud de vacante (vacío, error, revisión, confirmación y anulación); Horarios (pestañas por nivel); Lista de útiles (pestañas por nivel y descarga); Contáctenos (vacío, error y envío correcto); Nivel Primaria (contenido con galería). Fecha de evaluación: 30 de octubre de 2026.</p>
+      <h3>Cómo lo evaluamos</h3>
+      <p>Autoevaluación de los 50 criterios A y AA de WCAG 2.1, con tres métodos: revisión automática con axe-core 4.10.2 en 19 páginas; revisión manual criterio por criterio (contraste calculado con la fórmula de WCAG, ampliación al 200 %, pantalla de 320 px, espaciado de texto y simulación de daltonismo); y recorridos solo con teclado y con el árbol de accesibilidad que usan los lectores de pantalla.</p>
+    </div>
+    <div class="declaracion__tabla">
+      <table class="tabla-a11y">
+        <caption>Resultado por principio (número de criterios)</caption>
+        <thead><tr><th scope="col">Principio</th><th scope="col">Cumple</th><th scope="col">Parcial</th><th scope="col">No cumple</th><th scope="col">No aplica</th><th scope="col">Estado</th></tr></thead>
+        <tbody><tr><th scope="row">Perceptible</th><td>14</td><td>2</td><td>2</td><td>2</td><td>Parcialmente conforme</td></tr><tr><th scope="row">Operable</th><td>16</td><td>0</td><td>0</td><td>1</td><td>Cumple</td></tr><tr><th scope="row">Comprensible</th><td>10</td><td>0</td><td>0</td><td>0</td><td>Cumple</td></tr><tr><th scope="row">Robusto</th><td>3</td><td>0</td><td>0</td><td>0</td><td>Cumple</td></tr><tr class="total"><th scope="row">Total (50)</th><td>43</td><td>2</td><td>2</td><td>3</td><td>Parcialmente conforme</td></tr></tbody>
+      </table>
+    </div>
+    <div class="prosa">
+      <h3>Contenido que todavía no es accesible</h3>
       <ul>
-        <li><strong>WCAG 2.2, nivel AA</strong> (W3C): estándar internacional de accesibilidad web.</li>
-        <li><strong>Ley N.° 29973</strong>, Ley General de la Persona con Discapacidad (Perú): reconoce el derecho a la accesibilidad, incluida la información y las comunicaciones.</li>
-        <li><strong>Resolución de Secretaría de Gobierno y Transformación Digital N.° 001-2025-PCM/SGTD</strong>: lineamientos de accesibilidad digital para entidades públicas. El colegio es una institución privada y la toma como buena práctica.</li>
+        <li><strong>Video institucional de Inicio (1.2.2, 1.2.3 y 1.2.5).</strong> Los subtítulos se activan solos, pero son automáticos y no se han revisado; no hay transcripción ni audiodescripción. Plan: subir subtítulos revisados y una transcripción descriptiva.</li>
+        <li><strong>Afiches del mosaico de actividades (1.4.5).</strong> Algunas imágenes heredadas del sitio oficial tienen texto dentro de la imagen y su texto alternativo solo da el título. Plan: reemplazarlas por fotos con el texto en HTML.</li>
+        <li><strong>Documentos PDF (fuera del alcance).</strong> Horarios, listas de útiles y reglamentos son PDF pensados para imprimir y algunos no se leen bien con lector de pantalla. Si necesitas uno en formato accesible, pídelo y te lo enviamos.</li>
+        <li><strong>Funciones que dependen del navegador.</strong> La lectura en voz alta y el control por voz funcionan en Chrome y Edge y usan las voces instaladas en el equipo.</li>
+        <li><strong>Lengua de Señas Peruana.</strong> Todavía no hay videos en LSP. Es una mejora recomendada para el colegio.</li>
       </ul>
-      <h2>Limitaciones conocidas</h2>
+      <h3>Criterios nuevos de WCAG 2.2</h3>
+      <p>También revisamos los criterios que agrega WCAG 2.2 (ISO/IEC 40500:2025): 2.4.11 Foco no oculto (mínimo): cumple; 2.5.7 Movimientos de arrastre: no aplica; 2.5.8 Tamaño del objetivo (mínimo): cumple; 3.2.6 Ayuda consistente: cumple; 3.3.7 Entrada redundante: cumple; 3.3.8 Autenticación accesible (mínimo): no aplica.</p>
+      <h3>Sobre el panel de accesibilidad</h3>
+      <p>El panel es una ayuda adicional. Las correcciones de contraste, estructura, teclado y formularios están hechas en el propio sitio, de modo que todo funciona aunque el panel esté apagado.</p>
+      <h3>¿Encontraste una barrera?</h3>
+      <p>Cuéntanos qué página y qué problema encontraste. Escríbenos a <a href="mailto:informes@colegiobarton.edu.pe?subject=Barrera%20de%20accesibilidad">informes@colegiobarton.edu.pe</a>, llama al <a href="tel:+51943506739">943 506 739</a> o usa el <a href="contactenos.html#form-contacto">formulario de contacto</a>. Respondemos en un máximo de 5 días hábiles por el medio que prefieras.</p>
+      <h3>Normas de referencia</h3>
       <ul>
-        <li>Algunos PDF (horarios, listas de útiles, reglamentos) son documentos escaneados o diseñados para imprimir y pueden no leerse bien con lectores de pantalla. Si necesitas una versión accesible, pídela por correo.</li>
-        <li>Los subtítulos de los videos dependen de YouTube; en algunos casos son generados automáticamente.</li>
-        <li>Todavía no hay videos en Lengua de Señas Peruana (LSP). Es una mejora recomendada para el colegio.</li>
-        <li>La lectura en voz alta y el control por voz dependen del navegador y de las voces instaladas en el equipo.</li>
+        <li><strong>WCAG 2.1, nivel AA</strong> (W3C), y WCAG 2.2, adoptada como norma ISO/IEC 40500:2025.</li>
+        <li><strong>Ley N.° 29973</strong>, Ley General de la Persona con Discapacidad, y su reglamento (D.S. N.° 002-2014-MIMP).</li>
+        <li><strong>Ley N.° 29733</strong>, Ley de Protección de Datos Personales, en los formularios.</li>
+        <li>El colegio es una institución privada: los lineamientos de accesibilidad digital de la PCM son obligatorios para entidades públicas y aquí se toman como buena práctica.</li>
       </ul>
-      <h2>¿Encontraste una barrera?</h2>
-      <p>Cuéntanos qué página y qué problema encontraste, y te responderemos por el medio que prefieras. Escríbenos a <a href="mailto:informes@colegiobarton.edu.pe?subject=Accesibilidad%20del%20sitio%20web">informes@colegiobarton.edu.pe</a> o usa el <a href="contactenos.html#form-contacto">formulario de contacto</a>.</p>
-      <p class="foto-pie">Última revisión: octubre de 2026.</p>
+      <p class="foto-pie">Declaración preparada el 30 de octubre de 2026. Próxima revisión: marzo de 2027.</p>
     </div>
   </div>
 </section>

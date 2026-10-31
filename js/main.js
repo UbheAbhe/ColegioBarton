@@ -283,11 +283,11 @@
       $$("[required]", form).forEach(function (c) {
         var err = $("#" + c.id + "-error");
         var msg = "";
-        if (!c.value.trim()) msg = "Completa este campo.";
-        else if (c.type === "email" && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(c.value)) msg = "Escribe un correo válido, por ejemplo nombre@correo.com.";
-        else if (c.type === "tel" && !/^[0-9\s+()-]{6,}$/.test(c.value)) msg = "Escribe un número de teléfono válido.";
+        if (!c.value.trim()) msg = "Completa el campo «" + (c.labels && c.labels[0] ? c.labels[0].textContent.replace(" *", "").trim() : "obligatorio") + "».";
+        else if (c.type === "email" && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(c.value)) msg = c.value.indexOf("@") === -1 ? "Al correo le falta la @. Ejemplo: nombre@gmail.com." : "Revisa el dominio del correo, por ejemplo «@gmail.com».";
+        else if (c.type === "tel" && !/^[0-9\s+()-]{6,}$/.test(c.value)) msg = "Usa solo números; por ejemplo 987654321.";
         c.setAttribute("aria-invalid", msg ? "true" : "false");
-        if (err) err.textContent = msg;
+        if (err) err.textContent = msg ? "Error: " + msg : "";
         if (msg && ok) { c.focus(); ok = false; }
       });
       if (!ok) return;
